@@ -1,1 +1,9 @@
+html {
+    background: #ffffff;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 32%, rgba(127, 220, 227, 1) 49%, rgba(87, 90, 255, 1) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
 
+    
+ 
+}
