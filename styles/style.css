@@ -1,9 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     background: #ffffff;
     background: linear-gradient(180deg,rgba(255, 255, 255, 1) 32%, rgba(127, 220, 227, 1) 49%, rgba(87, 90, 255, 1) 100%);
     background-repeat: no-repeat;
-    min-height: 100vh;
 
-    
+
+    div {
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        min-height: 100vh;
+
+        footer {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #3586ff;
+        }
+    }
  
 }
