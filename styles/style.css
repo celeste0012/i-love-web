@@ -9,14 +9,38 @@ html {
     background: linear-gradient(180deg,rgba(255, 255, 255, 1) 43%, rgba(53, 134, 255, 1) 55%, rgba(13, 67, 148, 1) 84%);
     background-repeat: no-repeat;
     height: 100%;
-    overflow: hidden;
+    overflow: clip;
 
     #div {
         position: absolute;
-        top: -550px;
-        display: grid;
-        grid-template-columns: repeat(10, 200px);
-        grid-template-rows: repeat(60, 10px);
+
+        @media (min-width: 0px) {
+            display: grid;
+            top: -950px;
+            grid-template-columns: repeat(1, 200px);
+            grid-template-rows: repeat(60, 17px);
+        }
+        
+        @media (min-width: 310px){
+            display: grid;
+            top: -950px;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(60, 17px);
+        }
+
+        @media (min-width: 460px){
+            display: grid;
+            top: -950px;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(60, 17px);
+        }
+
+        @media (min-width: 670px){
+            display: grid;
+            top: -950px;
+            grid-template-columns: repeat(10, 200px);
+            grid-template-rows: repeat(60, 17px);
+        }
 
         #mediaquery {
 
@@ -25,55 +49,59 @@ html {
 
     @media (prefers-reduced-motion: no-preference){
 
+        @media (max-height: 740px) {
 
-        div {
-            display: flex;
-            justify-content: end;
-            flex-direction: column;
-            translate: 0 100%;
 
-            footer {
-                position: relative;
-                width: 100%;
-                height: 200px;
+
+            div {
+                display: flex;
+                justify-content: end;
+                flex-direction: column;
+                translate: 0 100%;
+
+                footer {
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                    
+                }
+
+                footer .wave {
+                    position: absolute;
+                    top: -30px;
+                    width: 100%;
+                    height: 100px;
+                    background: url(../assets/wave.png);
+                    background-size: 1000px 100px;
+                }
+
+                footer .wave#wave1 {
+                    opacity: 1;
+                    animation: animate 4s linear infinite;
+                    bottom: 0px;
+                    z-index: 20;
+                }
+
+                footer .wave#wave2 {
+                    opacity: 0.5;
+                    animation: animate2 4s linear infinite;
+                    bottom: 15px;
+                    z-index: 15;
+                }
                 
-            }
+                footer .wave#wave3 {
+                    opacity: 0.2;
+                    animation: animate 3s linear infinite;
+                    bottom: 25px;
+                    z-index: 10;
+                }
 
-            footer .wave {
-                position: absolute;
-                top: -30px;
-                width: 100%;
-                height: 100px;
-                background: url(../assets/wave.png);
-                background-size: 1000px 100px;
-            }
-
-            footer .wave#wave1 {
-                opacity: 1;
-                animation: animate 4s linear infinite;
-                bottom: 0px;
-                z-index: 20;
-            }
-
-            footer .wave#wave2 {
-                opacity: 0.5;
-                animation: animate2 4s linear infinite;
-                bottom: 15px;
-                z-index: 15;
-            }
-            
-            footer .wave#wave3 {
-                opacity: 0.2;
-                animation: animate 3s linear infinite;
-                bottom: 25px;
-                z-index: 10;
-            }
-
-            footer .wave#wave4 {
-                opacity: 0.7;
-                animation: animate2 4s linear infinite;
-                bottom: 35px;
-                z-index: 5;
+                footer .wave#wave4 {
+                    opacity: 0.7;
+                    animation: animate2 4s linear infinite;
+                    bottom: 35px;
+                    z-index: 5;
+                }
             }
         }
     }
