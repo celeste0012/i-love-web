@@ -6,22 +6,79 @@
 
 html {
     background: #ffffff;
-    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 32%, rgba(127, 220, 227, 1) 49%, rgba(87, 90, 255, 1) 100%);
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 43%, rgba(53, 134, 255, 1) 55%, rgba(13, 67, 148, 1) 84%);
     background-repeat: no-repeat;
+    height: 100%;
 
 
     div {
         display: flex;
         justify-content: end;
         flex-direction: column;
-        min-height: 100vh;
+        translate: 0 100%;
 
         footer {
             position: relative;
             width: 100%;
             height: 200px;
-            background: #3586ff;
+            
+        }
+
+        footer .wave {
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            height: 100px;
+            background: url(../assets/wave.png);
+            background-size: 1000px 100px;
+        }
+
+        footer .wave#wave1 {
+            opacity: 1;
+            animation: animate 4s linear infinite;
+            bottom: 0px;
+            z-index: 20;
+        }
+
+        footer .wave#wave2 {
+            opacity: 0.5;
+            animation: animate2 4s linear infinite;
+            bottom: 10px;
+            z-index: 15;
+        }
+        
+        footer .wave#wave3 {
+            opacity: 0.2;
+            animation: animate 3s linear infinite;
+            bottom: 15px;
+            z-index: 10;
+        }
+
+        footer .wave#wave4 {
+            opacity: 0.7;
+            animation: animate2 4s linear infinite;
+            bottom: 20px;
+            z-index: 5;
         }
     }
- 
+}
+
+@keyframes animate {
+    0% {
+        background-position: 1000px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 1000px;
+    }
 }
