@@ -9,16 +9,17 @@ html {
     background: linear-gradient(180deg,rgba(255, 255, 255, 1) 43%, rgba(53, 134, 255, 1) 55%, rgba(13, 67, 148, 1) 84%);
     background-repeat: no-repeat;
     height: 100%;
-
+    overflow: hidden;
 
     #div {
         position: absolute;
+        top: -550px;
         display: grid;
-        grid-template-columns: repeat(10, 400px);
-        grid-template-rows: repeat(25, 10px);
+        grid-template-columns: repeat(10, 200px);
+        grid-template-rows: repeat(60, 10px);
 
         #mediaquery {
-            
+
         }
     }
 
