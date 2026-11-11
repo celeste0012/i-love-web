@@ -6,13 +6,14 @@
 
 html {
     background: #ffffff;
-    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 43%, rgba(53, 134, 255, 1) 55%, rgba(13, 67, 148, 1) 84%);
-    background-repeat: no-repeat;
+    
     height: 100%;
     overflow: clip;
 
     #div {
         position: absolute;
+        background: linear-gradient(180deg,rgba(255, 255, 255, 1) 24%, rgba(53, 134, 255, 1) 31%, rgba(13, 67, 148, 1) 84%);
+    background-repeat: no-repeat;
 
         @media (min-width: 0px) {
             display: grid;
@@ -52,16 +53,17 @@ html {
                 justify-content: end;
                 flex-direction: column;
                 translate: 0 100%;
+                
 
                 footer {
                     position: relative;
                     width: 100%;
                     height: 200px;
-                    
+                    translate: 0 -20px;
                 }
             @media (prefers-reduced-motion: no-preference){
 
-            @media (max-height: 740px) {
+            /* @media (max-height: 740px) { */
 
                 footer .wave {
                     position: absolute;
@@ -99,7 +101,7 @@ html {
                     bottom: 35px;
                     z-index: 5;
                 }
-            }
+            /* } */
         }
     }
 }
