@@ -5,107 +5,115 @@
 }
 
 html {
-    background: #ffffff;
-    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 42%, rgba(53, 134, 255, 1) 52%, rgba(13, 67, 148, 1) 89%);
+
     height: 100%;
     overflow: clip;
+}
 
-    #div {
-        position: absolute;
-        background: linear-gradient(180deg,rgba(255, 255, 255, 1) 24%, rgba(53, 134, 255, 1) 31%, rgba(13, 67, 148, 1) 84%);
-    background-repeat: no-repeat;
+.bird {
+    position: absolute;
+    display: block;
+    top: -10em;
+}
+
+#div {
+    position: absolute;
     min-width: 100%;
+    z-index: 1;
 
-        @media (min-width: 0px) {
-            display: grid;
-            top: -950px;
-            grid-template-columns: repeat(1, 200px);
-            grid-template-rows: repeat(60, 17px);
-        }
-        
-        @media (min-width: 310px){
-            display: grid;
-            top: -950px;
-            grid-template-columns: repeat(2, 200px);
-            grid-template-rows: repeat(60, 17px);
-        }
-
-        @media (min-width: 460px){
-            display: grid;
-            top: -950px;
-            grid-template-columns: repeat(3, 200px);
-            grid-template-rows: repeat(60, 17px);
-        }
-
-        @media (min-width: 670px){
-            display: grid;
-            top: -950px;
-            grid-template-columns: repeat(10, 200px);
-            grid-template-rows: repeat(60, 17px);
-        }
-
-        #mediaquery {
-
-        }
+    @media (min-width: 0px) {
+        display: grid;
+        top: -950px;
+        grid-template-columns: repeat(1, 200px);
+        grid-template-rows: repeat(60, 17px);
     }
 
-            div {
-                display: flex;
-                justify-content: end;
-                flex-direction: column;
-                translate: 0 100%;
-                
+    @media (min-width: 310px) {
+        display: grid;
+        top: -950px;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(60, 17px);
+    }
 
-                footer {
-                    position: relative;
-                    width: 100%;
-                    height: 200px;
-                    translate: 0 -20px;
-                }
-            @media (prefers-reduced-motion: no-preference){
+    @media (min-width: 460px) {
+        display: grid;
+        top: -950px;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(60, 17px);
+    }
 
-            /* @media (max-height: 740px) { */
+    @media (min-width: 670px) {
+        display: grid;
+        top: -950px;
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(60, 17px);
+    }
 
-                footer .wave {
-                    position: absolute;
-                    top: -30px;
-                    width: 100%;
-                    height: 100px;
-                    background: url(../assets/wave.png);
-                    background-size: 1000px 100px;
-                }
+    @media (min-width: 837px) {
+        display: grid;
+        top: -950px;
+        grid-template-columns: repeat(10, 200px);
+        grid-template-rows: repeat(60, 17px);
+    }
+}
 
-                footer .wave#wave1 {
-                    opacity: 1;
-                    animation: animate 4s linear infinite;
-                    bottom: 0px;
-                    z-index: 20;
-                }
+div {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    translate: 0 100%;
 
-                footer .wave#wave2 {
-                    opacity: 0.5;
-                    animation: animate2 4s linear infinite;
-                    bottom: 15px;
-                    z-index: 15;
-                }
-                
-                footer .wave#wave3 {
-                    opacity: 0.2;
-                    animation: animate 3s linear infinite;
-                    bottom: 25px;
-                    z-index: 10;
-                }
 
-                footer .wave#wave4 {
-                    opacity: 0.7;
-                    animation: animate2 4s linear infinite;
-                    bottom: 35px;
-                    z-index: 5;
-                }
-            /* } */
+    footer {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        translate: 0 -20px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+
+        footer .wave {
+            position: absolute;
+            top: -30px;
+            width: 100%;
+            height: 100px;
+            background: url(../assets/wave.png);
+            background-size: 1000px 100px;
+        }
+
+        footer .wave#wave1 {
+            opacity: 1;
+            animation: animate 4s linear infinite;
+            bottom: 0px;
+            z-index: 20;
+        }
+
+        footer .wave#wave2 {
+            opacity: 0.5;
+            animation: animate2 4s linear infinite;
+            bottom: 15px;
+            z-index: 15;
+        }
+
+        footer .wave#wave3 {
+            opacity: 0.2;
+            animation: animate 3s linear infinite;
+            bottom: 25px;
+            z-index: 10;
+        }
+
+        footer .wave#wave4 {
+            opacity: 0.7;
+            animation: animate2 4s linear infinite;
+            bottom: 35px;
+            z-index: 5;
         }
     }
 }
+
+
 
 @keyframes animate {
     0% {
