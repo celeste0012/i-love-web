@@ -5,24 +5,40 @@
 }
 
 html {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 42%, rgba(53, 134, 255, 1) 52%, rgba(13, 67, 148, 1) 89%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 46%, rgba(53, 134, 255, 1) 55%, rgba(13, 67, 148, 1) 89%);
 
     height: 100%;
     overflow: clip;
 }
 
+h1 {
+    color: blue;
+    z-index: 100;
+    position: relative;
+}
+
 .bird {
     position: absolute;
     display: block;
-    top: -10em;
+
+    img {
+        width:7em ;
+    }
+
+    right: 10em;
+    top: -8em;
+
+    @media (max-width:300px) {
+        left:1.6em;
+    }
 }
 
 #div {
+    display: block;
     position: absolute;
     min-width: 100%;
-    z-index: 1;
 
-    @media (min-width: 0px) {
+    /* @media (min-width: 0px) {
         display: grid;
         top: -950px;
         grid-template-columns: repeat(1, 200px);
@@ -55,8 +71,22 @@ html {
         top: -950px;
         grid-template-columns: repeat(10, 200px);
         grid-template-rows: repeat(60, 17px);
-    }
+    } */
+
+
 }
+
+    #links {
+        display: block;
+        position: absolute;
+        right: 12.3em;
+        color: white;
+        overflow-wrap: none;
+
+        @media (max-width:300px) {
+        left:4em;
+        }
+    }
 
 div {
     display: flex;
