@@ -1,0 +1,20 @@
+.file {
+    
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: bisque;
+
+
+    &:hover {
+        cursor: pointer;
+        background-color: aqua;
+    }
+}
+
+#dockpicker {
+    &:focus-within {
+        .file {
+            border: 5px blue solid;
+        }
+    }
+}
